@@ -95,6 +95,10 @@ p {
     width: 50%;
 }
 
+.tablet-avatar, .desktop-avatar {
+    display: none;
+}
+
     /* Greeting */
 .home-greeting {
     margin: 7% 0 15%;
@@ -270,11 +274,20 @@ p {
     /* avatar */
     .home-avatar {
         width: 40%;
+        max-width: 310px;
         position: absolute;
         top: 0;
         right: 3%;
         z-index: 0;
     }
+
+    .tablet-avatar {
+        display: inline;
+    }
+
+    .mobile-avatar, .desktop-avatar {
+        display: none;
+    }    
 
     .home-greeting {
         position: relative;
@@ -322,8 +335,17 @@ p {
 
     .home-avatar  {
         width: 30%;
+        max-width: 432px;
         right: 15%;
     }
+
+    .desktop-avatar {
+        display: inline;
+    }
+
+    .mobile-avatar, .tablet-avatar {
+        display: none;
+    }    
 
     .view-code {
         margin-top: 5%;
