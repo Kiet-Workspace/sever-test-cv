@@ -18,7 +18,7 @@
 <body>
   <div class="container-fluid">
       <!-- Home -->
-    <div id="home" class="home-page">
+    <header id="home" class="home-page" role="heading">
       <!-- Home heading -->
       <div class="home-heading">
         <h1 class="heading-page">adamkeyes</h1>
@@ -40,7 +40,8 @@
         <p class="greeting-information">Based in the UK, I'm a front-end developer passionate about building accessible web apps that users love.</p>
         <a class="underline-box" href="#contact">CONTACT ME</a>
       </div>
-    </div>
+    </header>
+  <main role="main">
     <!-- Skills -->
     <div id="skills" class="skills-section">
       <div class="row">
@@ -192,10 +193,12 @@
       </div>
     </div>
     </div>
+  </main>
+    
   
 
  <!-- Contact -->
-<div class="container-fluid page-footer">
+<footer class="container-fluid page-footer">
   <div id="contact" class="contact-section">
     <div class="row">
       <div class="col-lg-7">
@@ -203,12 +206,20 @@
         <p class="contact-message">I would love to hear about your project and how I could help. Please fill in the form, and I’ll get back to you as soon as possible.</p>
       </div>
       <div class="col-lg-5 input-contact">
-        <form action="">
+        <form id="form-contact">
           <input type="text" id="input-name" placeholder="NAME">
-          <input type="email" id="input-email" placeholder="EMAIL">
-          <textarea name="" id="input-message" cols="auto" rows="3" placeholder="MESSAGE"></textarea>
-          <button class="btn-send-contact" type="button" >SEND MESSAGE</button>
+          <p class="warning-name">Please input your name here!</p>
+          <div class="email-field">
+            <div class="email-warning-icon">
+              <img src="./assets/images/warning-circle.svg" alt="">
+            </div>            
+            <input type="email" id="input-email" placeholder="EMAIL">
+          </div>
+          <p class="warning-email">Please input your name here!</p>
+          <p class="warning-invalid-email">Sorry, invalid format here</p>
+          <textarea name="message" id="input-message" rows="3" placeholder="MESSAGE"></textarea>
         </form>
+        <button class="btn-send-contact" type="submit" form="#form-contact">SEND MESSAGE</button>
       </div>
     </div>
     
@@ -226,7 +237,7 @@
       <li><img src="./assets/images/icon-twitter.svg" alt=""></li>
     </ul>
   </div>
-</div> 
+</footer>> 
 
 
 <script src="./script.js"></script>
